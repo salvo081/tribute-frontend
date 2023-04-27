@@ -29,8 +29,8 @@ function App() {
       <main className="App-main">
         <h1>Main</h1>
         <Home />
-        <ScrollingText />
         <AllBoxes />
+        <ScrollingText />
         <AllBlogs />
       </main>
       <Footer />

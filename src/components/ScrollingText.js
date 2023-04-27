@@ -1,9 +1,14 @@
 import './ScrollingText.css';
+import Marquee from 'react-gsap-marquee';
 
 export default function ScrollingText() {
   return (
     <>
-      <h1>Scrolling Text</h1>
+      <div className="marquee-wrapper">
+        <Marquee>
+          <p className="marquee-text">ALL TIME LEGENDS</p>
+        </Marquee>
+      </div>
     </>
   );
 }
