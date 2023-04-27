@@ -21,7 +21,7 @@ function App() {
           </p>
           <img
             className="headerImage"
-            src="https://picsum.photos/600/200"
+            src="src/assets/bg-blog.jpeg"
             alt="dummy"
           />
         </div>
@@ -29,8 +29,8 @@ function App() {
       <main className="App-main">
         <h1>Main</h1>
         <Home />
-        <ScrollingText />
         <AllBoxes />
+        <ScrollingText />
         <AllBlogs />
       </main>
       <Footer />
