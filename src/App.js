@@ -21,7 +21,7 @@ function App() {
           </p>
           <img
             className="headerImage"
-            src="https://picsum.photos/600/200"
+            src="src/assets/bg-blog.jpeg"
             alt="dummy"
           />
         </div>
