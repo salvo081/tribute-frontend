@@ -1,0 +1,32 @@
+.hero-container {
+  display: flex;
+  justify-content: center;
+}
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 42rem;
+  width: 80rem;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.hero-text-wrapper {
+  position: absolute;
+  color: #d9d9d9;
+}
+.hero-text-wrapper h1 {
+  font-size: 6rem;
+  padding-bottom: 2rem;
+}
+.hero-text-wrapper p {
+  font-size: 1.5rem;
+}
+
+.hero-img {
+  width: 100%;
+}

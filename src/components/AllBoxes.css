@@ -2,4 +2,6 @@
   display: flex;
   justify-content: center;
   margin-top: 1em;
+  background-color: #1a1a1a;
+  padding: 2rem 0rem 2rem 0rem;
 }

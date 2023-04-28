@@ -5,8 +5,6 @@ export default function AllBoxes() {
   return (
     <div className="AllBoxes">
       <OneBox />
-      <OneBox />
-      <OneBox />
     </div>
   );
 }
