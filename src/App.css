@@ -6,6 +6,7 @@
 
 .App {
   text-align: center;
+  background-color: #1a1a1a;
 }
 
 .App-header {
@@ -14,21 +15,4 @@
 
 .App-main {
   background-color: #eee;
-}
-
-.headerParent {
-  display: flex;
-  justify-content: space-around;
-  height: 80vh;
-  padding: 1em;
-}
-
-.headerText {
-  width: 40%;
-}
-
-.headerImage {
-  width: 40%;
-  height: auto;
-  object-fit: cover;
 }
