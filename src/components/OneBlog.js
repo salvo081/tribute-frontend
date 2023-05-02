@@ -1,7 +1,6 @@
 import './OneBlog.css';
 
 export default function OneBlog({ random }) {
-  console.log(random);
   return (
     <article className="OneBlog">
       <img src={`https://picsum.photos/200/200?random=${random}`} alt="test" />
