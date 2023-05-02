@@ -17,8 +17,8 @@ function App() {
   useEffect(() => {
     client
       .getEntries()
-      .then((res) => {
-        console.log(res);
+      .then((entries) => {
+        console.log(entries);
       })
       .catch((err) => console.log(err));
   }, []);
