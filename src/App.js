@@ -8,7 +8,21 @@ import Hero from './components/Hero';
 
 import Home from './pages/Home';
 
+import { useEffect, useState } from 'react';
+import { client } from './client';
+
 function App() {
+  const [contentfulData, setContentfulData] = useState([]);
+
+  useEffect(() => {
+    client
+      .getEntries()
+      .then((entries) => {
+        console.log(entries);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
