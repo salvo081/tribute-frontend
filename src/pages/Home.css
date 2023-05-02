@@ -1,3 +1,18 @@
-.Home-title {
-  color: violet;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Home {
+  text-align: center;
+  background-color: #1a1a1a;
+}
+
+.Home-header {
+  background-color: #1a1a1a;
+}
+
+.Home-main {
+  background-color: #eee;
 }
