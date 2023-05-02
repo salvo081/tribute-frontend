@@ -1,0 +1,15 @@
+.blog-header {
+  display: flex;
+}
+main {
+  display: flex;
+}
+.blog-heading {
+  border: solid 3px green;
+}
+.sidebar-container {
+  border: solid 3px red;
+}
+.content-container {
+  border: solid 3px blue;
+}
