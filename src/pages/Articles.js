@@ -1,18 +1,15 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import AllBlogs from '../components/AllBlogs';
 import './Articles.css';
 
 export default function Articles() {
   return (
     <>
-      <Navbar />
       <div className="artist-heading">
-        <h1 className="blog-title">Blog Titel Artist Detail</h1>
+        <h1 className="blog-title">Blog Titel Artist</h1>
         <img src="https://picsum.photos/200/300" alt="Artist Name" />
       </div>
 
-      <main>
+      <div className="Articles-main">
         <div className="sidebar-container">
           <aside>
             <div className="sidebar-heading"></div>
@@ -23,9 +20,7 @@ export default function Articles() {
           <div className="blog-heading"></div>
           <AllBlogs />
         </div>
-      </main>
-
-      <Footer />
+      </div>
     </>
   );
 }

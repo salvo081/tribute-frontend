@@ -1,16 +1,13 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import './ArticleDetail.css';
 
 export default function ArticleDetail() {
   return (
     <>
-      <Navbar />
       <div className="artist-heading">
         <h1 className="blog-title">Blog Titel Artist Detail</h1>
         <img src="https://picsum.photos/200/300" alt="Artist Name" />
       </div>
-      <main>
+      <div className="ArticleDetail-main">
         <div className="sidebar-container">
           <aside>
             <div className="sidebar-heading">
@@ -33,9 +30,7 @@ export default function ArticleDetail() {
             </div>
           </div>
         </div>
-      </main>
-
-      <Footer />
+      </div>
     </>
   );
 }

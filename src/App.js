@@ -1,15 +1,14 @@
 import './App.css';
-import AllBlogs from './components/AllBlogs';
-import AllBoxes from './components/AllBoxes';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import ScrollingText from './components/ScrollingText';
-import Hero from './components/Hero';
 
 import Home from './pages/Home';
 
 import { useEffect, useState } from 'react';
 import { client } from './client';
+import { Route, Routes } from 'react-router';
+import Articles from './pages/Articles';
+import ArticleDetail from './pages/ArticleDetail';
 
 function App() {
   const [contentfulData, setContentfulData] = useState([]);
@@ -27,15 +26,21 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar />
-        <Hero />
       </header>
-      <main className="App-main">
-        {/* <h1>Main</h1> */}
-        <Home />
-        <AllBoxes />
-        <ScrollingText />
-        <AllBlogs />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="articles" element={<Articles />} />
+          <Route path="articles/:id" element={<ArticleDetail />} />
+        </Routes>
       </main>
+      {/* Route */}
+
+      {/* <AllBoxes />
+      <ScrollingText />
+      <AllBlogs /> */}
+      {/* END Route */}
+
       <Footer />
     </div>
   );

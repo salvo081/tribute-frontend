@@ -1,6 +1,9 @@
+import { Link } from 'react-router-dom/dist';
 import './OneBox.css';
 
 export default function OneBox() {
+  const id = 1;
+
   return (
     <section className="articles">
       <article>
@@ -16,7 +19,7 @@ export default function OneBox() {
               lobortis porta. Vestibulum ultrices iaculis enim imperdiet
               egestas.
             </p>
-            <a href="#" className="read-more">
+            <Link to={`articles/${id}`} className="read-more">
               Read more{' '}
               <span className="sr-only">about this is some title</span>
               <svg
@@ -30,7 +33,7 @@ export default function OneBox() {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </article>
