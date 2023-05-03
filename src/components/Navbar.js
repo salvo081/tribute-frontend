@@ -11,17 +11,17 @@ export default function Navbar() {
           <img className="nav-logo-img" src={logoImage} alt="Logo" />
         </NavLink>
       </div>
-      <div className="nav-links">
-        <NavLink to="/about">
-          <li>About</li>
-        </NavLink>
-        <NavLink to="/blog">
-          <li>Blog</li>
-        </NavLink>
-        <NavLink to="/contact">
-          <li>Contact</li>
-        </NavLink>
-      </div>
+      <ul className="nav-links">
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+        <li>
+          <NavLink to="/blog">Blog</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact">Contact</NavLink>
+        </li>
+      </ul>
       <div className="nav-search">
         <img className="nav-search-img" src={searchImage} alt="Seach Icon" />
       </div>
