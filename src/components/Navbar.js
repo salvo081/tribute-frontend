@@ -1,6 +1,6 @@
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
-import searchImage from '../assets/search.png';
+
 import logoImage from '../assets/logo.png';
 
 export default function Navbar() {
@@ -22,8 +22,19 @@ export default function Navbar() {
           <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
-      <div className="nav-search">
-        <img className="nav-search-img" src={searchImage} alt="Seach Icon" />
+      <div class="search-container">
+        <form>
+          <input
+            className="search expandright"
+            id="searchright"
+            type="search"
+            name="q"
+            placeholder="Search"
+          />
+          <label className="button searchbutton" for="searchright">
+            <span className="mglass">&#9906;</span>
+          </label>
+        </form>
       </div>
     </nav>
   );
