@@ -19,6 +19,7 @@ export default function OneBox() {
               lobortis porta. Vestibulum ultrices iaculis enim imperdiet
               egestas.
             </p>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <Link to={`articles/${id}`} className="read-more">
               Read more{' '}
               <span className="sr-only">about this is some title</span>
