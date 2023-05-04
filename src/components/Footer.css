@@ -1,4 +1,27 @@
 .Footer-main {
-  background-color: #282c34;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+  height: 20rem;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 0px;
+}
+.newsletter-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 3rem;
+}
+.newsletter-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 3rem;
 }
