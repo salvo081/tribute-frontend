@@ -17,10 +17,13 @@ function App() {
     client
       .getEntries()
       .then((entries) => {
-        console.log(entries);
+        // console.log(entries);
+        setContentfulData(entries.items);
       })
       .catch((err) => console.log(err));
   }, []);
+
+  console.log(contentfulData);
 
   return (
     <div className="App">
@@ -29,7 +32,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home items={contentfulData} />} />
           <Route path="articles" element={<Articles />} />
           <Route path="articles/:id" element={<ArticleDetail />} />
         </Routes>

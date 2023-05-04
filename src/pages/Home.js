@@ -4,13 +4,15 @@ import AllBoxes from '../components/AllBoxes';
 import ScrollingText from '../components/ScrollingText';
 import Hero from '../components/Hero';
 
-function Home() {
+function Home({ items }) {
+  console.log('Home Items: ', items);
+
   return (
     <div className="Home-main">
       <Hero />
-      <AllBoxes />
+      <AllBoxes items={items} />
       <ScrollingText />
-      <AllBlogs />
+      <AllBlogs items={items} />
     </div>
   );
 }

@@ -58,6 +58,7 @@ article a {
   text-decoration: none;
   color: #d9d9d9;
 }
+
 article p {
   display: flex;
   color: #d9d9d9;
@@ -74,6 +75,13 @@ article a .icon {
   opacity: var(--link-icon-opacity);
   transition: all 0.3s;
 }
+
+/* .article-text {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
 
 /* Hover Zoom */
 
@@ -92,19 +100,11 @@ article:has(:hover, :focus) {
   box-sizing: border-box;
 }
 
-.articles {
-  display: grid;
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-}
-
 @media screen and (max-width: 960px) {
   article {
     container: card/inline-size;
   }
+
   .article-body p {
     display: none;
   }
@@ -116,14 +116,17 @@ article:has(:hover, :focus) {
     grid-template-columns: 100px 1fr;
     gap: 16px;
   }
+
   .article-body {
     padding-left: 0;
   }
+
   figure {
     width: 100%;
     height: 100%;
     overflow: hidden;
   }
+
   figure img {
     height: 100%;
     aspect-ratio: 1;

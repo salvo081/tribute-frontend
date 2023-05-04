@@ -1,24 +1,28 @@
 import { Link } from 'react-router-dom/dist';
 import './OneBox.css';
 
-export default function OneBox() {
-  const id = 1;
+export default function OneBox({ artist, picture, shortBio, id }) {
+  console.log(
+    'Artist: ',
+    artist,
+    ' Id: ',
+    id,
+    'Picture: ',
+    picture,
+    'ShortBio: ',
+    shortBio
+  );
 
   return (
     <section className="articles">
       <article>
         <div className="article-wrapper">
           <figure>
-            <img src="https://picsum.photos/id/1011/800/450" alt="" />
+            <img src={`https:${picture}`} alt={artist} />
           </figure>
           <div className="article-body">
-            <h2>This is some title</h2>
-            <p>
-              Curabitur convallis ac quam vitae laoreet. Nulla mauris ante,
-              euismod sed lacus sit amet, congue bibendum eros. Etiam mattis
-              lobortis porta. Vestibulum ultrices iaculis enim imperdiet
-              egestas.
-            </p>
+            <h2>{artist}</h2>
+            <p className="article-text">{shortBio.slice(0, 150)}...</p>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <Link to={`articles/${id}`} className="read-more">
               Read more{' '}
