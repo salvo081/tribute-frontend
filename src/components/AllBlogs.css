@@ -1,6 +1,6 @@
 .AllBlogs {
   display: flex;
   flex-direction: column;
-  margin-top: 1em;
+  background-color: #1a1a1a;
   gap: 0.5em;
 }
