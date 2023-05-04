@@ -1,6 +1,6 @@
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
-import searchImage from '../assets/search.png';
+
 import logoImage from '../assets/logo.png';
 
 export default function Navbar() {
