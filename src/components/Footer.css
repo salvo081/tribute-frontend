@@ -5,6 +5,11 @@
   background-color: #1a1a1a;
   color: #d9d9d9;
   height: 20rem;
+  flex-wrap: wrap;
+}
+.footer-wrapper {
+  flex-wrap: wrap;
+  width: 100%;
 }
 .footer-container {
   display: grid;
@@ -76,4 +81,16 @@ label {
 }
 .newsletter-info-text {
   color: #808080;
+}
+.footer-divider {
+  margin: 2rem;
+}
+.social-footer {
+  display: flex;
+  justify-content: space-between;
+  height: 10rem;
+  padding-top: 2rem;
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 0 20rem;
 }
