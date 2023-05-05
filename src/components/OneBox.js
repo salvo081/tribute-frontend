@@ -25,7 +25,7 @@ export default function OneBox({ artist, picture, shortBio, id }) {
             <p className="article-text">{shortBio.slice(0, 150)}...</p>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <Link to={`articles/${id}`} className="read-more">
-              Read more{' '}
+              Read full article{' '}
               <span className="sr-only">about this is some title</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
