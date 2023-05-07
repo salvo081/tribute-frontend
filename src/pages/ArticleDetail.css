@@ -9,7 +9,7 @@
 .ArticleDetail-figure {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 3vw;
   aspect-ratio: auto;
 }
 
@@ -18,8 +18,8 @@
 }
 
 .ArticleDetail-picture {
+  max-width: 50vw;
   max-height: 50vh;
-  max-width: auto;
 }
 
 .ArticleDetail-main {
