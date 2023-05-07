@@ -34,7 +34,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home items={contentfulData} />} />
           <Route path="articles" element={<Articles />} />
-          <Route path="articles/:id" element={<ArticleDetail />} />
+          <Route
+            path="articles/:id"
+            element={<ArticleDetail items={contentfulData} />}
+          />
         </Routes>
       </main>
       {/* Route */}
