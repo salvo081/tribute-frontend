@@ -1,19 +1,64 @@
-.artist-heading {
+.ArticleDetail-artist-heading {
+  color: #d9d9d9;
+  border: solid 1px #d9d9d9;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 0.5em;
+}
+
+.ArticleDetail-figure {
   display: flex;
+  justify-content: center;
+  gap: 3rem;
+  aspect-ratio: auto;
+}
+
+.ArticleDetail-figcaption {
+  align-self: center;
+}
+
+.ArticleDetail-picture {
+  max-height: 50vh;
+  max-width: auto;
 }
 
 .ArticleDetail-main {
   display: flex;
+  color: #d9d9d9;
+  margin: 1rem;
+  gap: 1rem;
 }
 
-.artist-heading {
-  border: solid 3px green;
+.ArticleDetail-sidebar-container {
+  border: solid 1px #d9d9d9;
+  border-radius: 1rem;
+  flex: 1 1 30%;
+  padding: 1em;
 }
 
-.sidebar-container {
-  border: solid 3px red;
+.ArticleDetail-list-artist-info {
+  list-style: none;
 }
 
-.content-container {
-  border: solid 3px blue;
+.ArticleDetail-list-artist-info li {
+  padding: 0.5em 0;
+}
+
+.ArticleDetail-list-greatestHits li {
+  margin-left: 1.75em;
+}
+
+.ArticleDetail-content-container {
+  border: solid 1px #d9d9d9;
+  border-radius: 1rem;
+  flex: 1 1 70%;
+  padding: 1em;
+}
+
+.ArticleDetail-artist-bio {
+  border: none;
+}
+
+.ArticleDetail-artist-bio h3 {
+  padding-bottom: 0.5em;
 }
