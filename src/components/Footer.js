@@ -37,9 +37,10 @@ export default function Footer() {
           <div className="newsletter-info-wrapper">
             <h3>Subscribe to our newsletter</h3>
             <p className="newsletter-info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-              eum totam quia ex dolorem et incidunt velit quaerat? Error esse
-              sit alias iure totam atque numquam dolorem quos suscipit sint?
+              You love hearing from your favorite artists on a regular basis.
+              There are always new insights into the life of the deceased. So
+              stay up to date and don't miss any news about your star. Subscribe
+              to our newsletter now!
             </p>
           </div>
         </div>

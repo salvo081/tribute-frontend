@@ -1,12 +1,24 @@
 import './AllBlogs.css';
 import OneBlog from './OneBlog';
 
-export default function AllBlogs() {
+export default function AllBlogs({ items }) {
   return (
     <div className="AllBlogs">
-      <OneBlog random="1" />
-      <OneBlog random="2" />
-      <OneBlog random="3" />
+      {items.length > 0 ? (
+        items.slice(0, 6).map((item) => {
+          return (
+            <OneBlog
+              artist={item.fields.artist}
+              id={item.fields.id}
+              picture={item.fields.picture.fields.file.url}
+              shortBio={item.fields.shortBio.content[0].content[0].value}
+              key={item.fields.id}
+            />
+          );
+        })
+      ) : (
+        <h1>404 NOT FOUND</h1>
+      )}
     </div>
   );
 }
