@@ -1,5 +1,9 @@
 import './Footer.css';
 import { NavLink } from 'react-router-dom';
+import Facebook from '../assets/socials/facebook.svg';
+import Twitter from '../assets/socials/twitter.svg';
+import Linkedin from '../assets/socials/linkedin.svg';
+import Pinterest from '../assets/socials/pinterest.svg';
 
 export default function Footer() {
   return (
@@ -42,9 +46,9 @@ export default function Footer() {
       </div>
       <div className="social-footer">
         <div className="nav-company">
-          <NavLink to="/">
+          <div>
             <p>&copy; 2023 Tribute - All right reserved. </p>
-          </NavLink>
+          </div>
         </div>
         <nav className="social-footer-container">
           <ul className="nav-links">
@@ -56,20 +60,44 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-        <div className="social-icon wrapper">
+        <div className="social-icon-wrapper">
           <nav className="social-footer-container">
             <ul className="nav-links">
               <li>
-                <NavLink to="/privacy">Facebook Policy</NavLink>
+                <NavLink to="https://facebook.com">
+                  <img
+                    className="social-img"
+                    src={Facebook}
+                    alt="Facebook Logo"
+                  />
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/service">Instagram</NavLink>
+                <NavLink to="https://linkedin.com">
+                  <img
+                    className="social-img"
+                    src={Linkedin}
+                    alt="Linkedin  Logo"
+                  />
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/service">Twitter</NavLink>
+                <NavLink to="https://twitter.com">
+                  <img
+                    className="social-img"
+                    src={Twitter}
+                    alt="Twitter Logo"
+                  />
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/service">LinkedIn</NavLink>
+                <NavLink to="https://pinterest.com">
+                  <img
+                    className="social-img"
+                    src={Pinterest}
+                    alt="Pinterest Logo"
+                  />
+                </NavLink>
               </li>
             </ul>
           </nav>

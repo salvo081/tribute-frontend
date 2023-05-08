@@ -1,0 +1,40 @@
+.box {
+  /* width: 240px; */
+  height: 15rem;
+  position: absolute;
+
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box .img {
+  width: 240px;
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box img {
+  max-width: 150px;
+  max-height: 50px;
+}
+
+.boxes {
+  display: flex;
+  position: relative;
+  left: -240px;
+}
+
+.logo-marquee-wrapper {
+  background-color: #d8d8d8;
+  height: 15rem;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}

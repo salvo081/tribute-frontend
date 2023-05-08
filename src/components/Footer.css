@@ -93,4 +93,13 @@ label {
   width: 100%;
   background-color: #1a1a1a;
   padding: 0 20rem;
+  align-items: center;
+}
+.social-footer a {
+  text-decoration: none;
+  color: #d9d9d9;
+  padding-right: 3rem;
+}
+.social-img {
+  width: 1.5rem;
 }
