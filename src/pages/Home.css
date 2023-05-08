@@ -16,3 +16,24 @@
 .Home-main {
   background-color: #eee;
 }
+.all-articles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  background-color: #1a1a1a;
+}
+button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 50rem;
+  background-color: #1a1a1a;
+  border: 1px solid #d9d9d9;
+  color: #d9d9d9;
+}
+button:hover {
+  background-color: #d9d9d9;
+  color: #1a1a1a;
+  border: none;
+  cursor: pointer;
+}

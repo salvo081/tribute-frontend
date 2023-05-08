@@ -1,0 +1,39 @@
+.box {
+  height: 10rem;
+  position: absolute;
+
+  font-size: 2rem;
+  line-height: 3.125rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box .img {
+  width: 15rem;
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box img {
+  max-width: 9.375rem;
+  max-height: 3.125rem;
+}
+
+.boxes {
+  display: flex;
+  position: relative;
+  left: -240px;
+}
+
+.logo-marquee-wrapper {
+  background-color: #d8d8d8;
+  height: 10rem;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}

@@ -10,6 +10,9 @@
 .footer-wrapper {
   flex-wrap: wrap;
   width: 100%;
+  background-color: #1a1a1a;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .footer-container {
   display: grid;
@@ -93,4 +96,14 @@ label {
   width: 100%;
   background-color: #1a1a1a;
   padding: 0 20rem;
+  align-items: center;
+  border-top: 1px solid #808080;
+}
+.social-footer a {
+  text-decoration: none;
+  color: #808080;
+  margin-right: 3rem;
+}
+.social-img {
+  width: 1.5rem;
 }
