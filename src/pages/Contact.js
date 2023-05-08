@@ -28,51 +28,77 @@ export default function Contact() {
   };
 
   return (
-    <form className="cntform" onSubmit={handleSubmit}>
-      <div>
-        <label className="cntlabel" htmlFor="name">
-          Name
-        </label>
-        <input
-          className="cntinput"
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleInputChange}
-          required
-        />
+    <form className="containercnt" onSubmit={handleSubmit}>
+      <div className="screen">
+        <div className="screen-header">
+          <div className="screen-header-left">
+            <div className="screen-header-button close"></div>
+            <div className="screen-header-button maximize"></div>
+            <div className="screen-header-button minimize"></div>
+          </div>
+          <div className="screen-header-right">
+            <div className="screen-header-ellipsis"></div>
+            <div className="screen-header-ellipsis"></div>
+            <div className="screen-header-ellipsis"></div>
+          </div>
+        </div>
+        <div className="screen-body">
+          <div className="screen-body-item left">
+            <div className="app-title">
+              <span>CONTACT</span>
+              <span>US</span>
+            </div>
+            <div className="app-contact">CONTACT INFO : +49 81 314 928 595</div>
+          </div>
+          <div className="screen-body-item">
+            <div className="app-form">
+              <div className="app-form-group">
+                <input
+                  className="app-form-control"
+                  placeholder="NAME"
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className="app-form-group">
+                <input
+                  className="app-form-control"
+                  placeholder="EMAIL"
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className="app-form-group">
+                <input className="app-form-control" placeholder="CONTACT NO" />
+              </div>
+              <div className="app-form-group message">
+                <input
+                  className="app-form-control"
+                  placeholder="MESSAGE"
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className="app-form-group buttons">
+                <button className="app-form-button" type="submit">
+                  SEND
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <label className="cntlabel" htmlFor="email">
-          Email
-        </label>
-        <input
-          className="cntinput"
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          required
-        />
-      </div>
-      <div>
-        <label className="cntlabel" htmlFor="message">
-          Message
-        </label>
-        <textarea
-          className="cnttextarea"
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleInputChange}
-          required
-        />
-      </div>
-      <button className="cntbutton" type="submit">
-        Send
-      </button>
     </form>
   );
 }
