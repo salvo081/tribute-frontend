@@ -1,0 +1,57 @@
+.about-container h1 {
+  text-align: center;
+}
+
+.about-container {
+  max-width: 50rem;
+  margin: 10rem auto;
+  padding: 1.25rem;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.about-description {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  text-align: justify;
+}
+
+.about-description:last-of-type {
+  margin-bottom: 0;
+}
+
+.about-thankyou {
+  font-size: 1.125rem;
+  margin-top: 2.5rem;
+  text-align: center;
+  font-style: italic;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+.about-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.about-container a {
+  color: white;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+}
+
+.about-container a:hover {
+  color: #ffcd00;
+}
+
+.about-container p {
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  text-align: justify;
+}

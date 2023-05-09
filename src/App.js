@@ -11,6 +11,7 @@ import { useLocation } from 'react-router-dom';
 import Articles from './pages/Articles';
 import ArticleDetail from './pages/ArticleDetail';
 import Contact from './pages/Contact';
+import About from './pages/About';
 
 function App() {
   const [contentfulData, setContentfulData] = useState([]);
@@ -46,6 +47,7 @@ function App() {
             element={<ArticleDetail items={contentfulData} />}
           />
           <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
         </Routes>
       </main>
       {/* Route */}
