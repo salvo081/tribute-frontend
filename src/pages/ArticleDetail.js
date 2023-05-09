@@ -36,10 +36,10 @@ export default function ArticleDetail({ items }) {
     biggestTour: thisItem.fields.biggestTour,
     distinguishingFeature: thisItem.fields.distinguishingFeature,
     picture: thisItem.fields.picture.fields.file.url,
-    shortBio: thisItem.fields.shortBio.content[0].content[0].value,
+    shortBio: thisItem.fields.shortBio.content,
   };
 
-  // console.log(greatestHits);
+  // console.log('Short bio:', shortBio);
 
   let key = 1;
 
@@ -63,48 +63,107 @@ export default function ArticleDetail({ items }) {
             <h3>Artist Information</h3>
           </div>
           <div className="ArticleDetail-sidebar-artist-info">
-            <ul className="ArticleDetail-list-artist-info">
-              {bandName ? <li>Band name: {bandName}</li> : ''}
-              {country ? <li>Country: {country}</li> : ''}
+            <dl className="ArticleDetail-list-artist-info">
+              {bandName ? (
+                <>
+                  <dt>Band name:</dt>
+                  <dd>{bandName}</dd>
+                </>
+              ) : (
+                ''
+              )}
+              {country ? (
+                <>
+                  <dt>Country:</dt>
+                  <dd>{country}</dd>
+                </>
+              ) : (
+                ''
+              )}
               {birth ? (
-                <li>Born: {new Date(birth).toLocaleDateString('en-US')}</li>
+                <>
+                  <dt>Born:</dt>
+                  <dd>{new Date(birth).toLocaleDateString('en-US')}</dd>
+                </>
               ) : (
                 ''
               )}
               {death ? (
-                <li>Died: {new Date(death).toLocaleDateString('en-US')}</li>
+                <>
+                  <dt>Died:</dt>
+                  <dd>{new Date(death).toLocaleDateString('en-US')}</dd>
+                </>
               ) : (
                 ''
               )}
-              {artOfDeath ? <li>Cause of death: {artOfDeath}</li> : ''}
+              {artOfDeath ? (
+                <>
+                  <dt>Cause of death:</dt>
+                  <dd>{artOfDeath}</dd>
+                </>
+              ) : (
+                ''
+              )}
               {greatestHits.length > 0 ? (
-                <li>
-                  Greatest Hits:
-                  <ol className="ArticleDetail-list-greatestHits">
-                    {greatestHits.map((el) => {
-                      const title = el.content[0].content[0].value;
-                      const description = el.content[0].content[1].value;
-                      return <li key={key++}>{title + description}</li>;
-                    })}
-                  </ol>
-                </li>
+                <>
+                  <dt>Greatest Hits:</dt>
+                  <dd>
+                    <ol className="ArticleDetail-list-greatestHits">
+                      {greatestHits.map((el) => {
+                        const title = el.content[0].content[0].value;
+                        const description = el.content[0].content[1].value;
+                        return (
+                          <li key={key++}>
+                            <span className="ArticleDetail-greatestHits-title">
+                              {title}
+                            </span>
+                            {description}
+                          </li>
+                        );
+                      })}
+                    </ol>
+                  </dd>
+                </>
               ) : (
                 ''
               )}
-              {album ? <li>Most Sold Album: {album}</li> : ''}
-              {biggestTour ? <li>Biggest Tour: {biggestTour}</li> : ''}
+              {album ? (
+                <>
+                  <dt>Most Sold Album:</dt>
+                  <dd>{album}</dd>
+                </>
+              ) : (
+                ''
+              )}
+              {biggestTour ? (
+                <>
+                  <dt>Biggest Tour:</dt>
+                  <dd>{biggestTour}</dd>
+                </>
+              ) : (
+                ''
+              )}
               {distinguishingFeature ? (
-                <li>Distinguishing feature: {distinguishingFeature}</li>
+                <>
+                  <dt>Distinguishing feature:</dt>
+                  <dd>{distinguishingFeature}</dd>
+                </>
               ) : (
                 ''
               )}
-            </ul>
+            </dl>
           </div>
         </aside>
         <div className="ArticleDetail-content-container">
           <article className="ArticleDetail-artist-bio">
             <h3>Artist Bio</h3>
-            <p>{shortBio}</p>
+            {shortBio.length > 0 ? (
+              shortBio.map((el) => {
+                return <p key={key++}>{el.content[0].value}</p>;
+              })
+            ) : (
+              <h1>NO BIO FOUND</h1>
+            )}
           </article>
         </div>
       </section>

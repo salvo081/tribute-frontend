@@ -3,7 +3,7 @@
   border: solid 1px #d9d9d9;
   border-radius: 1rem;
   margin: 1rem;
-  padding: 0.5em;
+  padding: 1em;
 }
 
 .ArticleDetail-figure {
@@ -15,10 +15,11 @@
 
 .ArticleDetail-figcaption {
   align-self: center;
+  font-size: 2.5rem;
 }
 
 .ArticleDetail-picture {
-  max-width: 50vw;
+  max-width: 40vw;
   max-height: 50vh;
 }
 
@@ -32,33 +33,49 @@
 .ArticleDetail-sidebar-container {
   border: solid 1px #d9d9d9;
   border-radius: 1rem;
-  flex: 1 1 30%;
-  padding: 1em;
+  flex: 1 1 35%;
+  padding: 2em;
 }
 
-.ArticleDetail-list-artist-info {
-  list-style: none;
+.ArticleDetail-sidebar-heading h3 {
+  font-size: 1.5em;
 }
 
-.ArticleDetail-list-artist-info li {
+/* .ArticleDetail-list-artist-info {
+  border: solid 3px red;
+} */
+
+.ArticleDetail-list-artist-info dt {
   padding: 0.5em 0;
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.ArticleDetail-list-artist-info dd {
+  margin-left: 1.75em;
 }
 
 .ArticleDetail-list-greatestHits li {
-  margin-left: 1.75em;
+  padding: 0.5em 0;
+}
+
+.ArticleDetail-greatestHits-title {
+  font-weight: bold;
 }
 
 .ArticleDetail-content-container {
   border: solid 1px #d9d9d9;
   border-radius: 1rem;
-  flex: 1 1 70%;
-  padding: 1em;
+  flex: 1 1 65%;
+  padding: 2em;
 }
 
 .ArticleDetail-artist-bio {
   border: none;
+  border-radius: 0px;
 }
 
 .ArticleDetail-artist-bio h3 {
   padding-bottom: 0.5em;
+  font-size: 1.5em;
 }
