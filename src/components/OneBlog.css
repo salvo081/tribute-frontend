@@ -1,14 +1,11 @@
-article {
-}
-
-/* article a::after {
+article a::after {
   max-width: 50%;
   position: absolute;
   inset-block: 0;
   inset-inline: 0;
   cursor: pointer;
   content: '';
-} */
+}
 article img {
   max-width: 10%;
   transform-origin: center;
