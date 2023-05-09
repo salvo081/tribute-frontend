@@ -15,7 +15,7 @@ import { NavLink } from 'react-router-dom';
 const images = [logo1, logo2, logo3, logo4, logo5, logo6];
 
 function Home({ items }) {
-  console.log('Home Items: ', items);
+  // console.log('Home Items: ', items);
 
   return (
     <div className="Home-main">

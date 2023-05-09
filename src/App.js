@@ -31,7 +31,7 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  console.log(contentfulData);
+  // console.log(contentfulData);
 
   return (
     <div className="App">

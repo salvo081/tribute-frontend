@@ -17,7 +17,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     // send form data to backend or email service
     // reset form fields
     setFormData({

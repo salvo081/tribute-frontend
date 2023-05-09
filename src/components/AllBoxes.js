@@ -2,7 +2,7 @@ import './AllBoxes.css';
 import OneBox from './OneBox';
 
 export default function AllBoxes({ items }) {
-  console.log('AllBoxes items: ', items);
+  // console.log('AllBoxes items: ', items);
 
   return (
     <div className="all-boxes-wrapper">

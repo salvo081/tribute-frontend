@@ -2,16 +2,16 @@ import { Link } from 'react-router-dom/dist';
 import './OneBox.css';
 
 export default function OneBox({ artist, picture, shortBio, id }) {
-  console.log(
-    'Artist: ',
-    artist,
-    ' Id: ',
-    id,
-    'Picture: ',
-    picture,
-    'ShortBio: ',
-    shortBio
-  );
+  // console.log(
+  //   'Artist: ',
+  //   artist,
+  //   ' Id: ',
+  //   id,
+  //   'Picture: ',
+  //   picture,
+  //   'ShortBio: ',
+  //   shortBio
+  // );
 
   return (
     <section className="articles">
