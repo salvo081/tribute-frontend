@@ -8,7 +8,7 @@ export default function OneBlog({ artist, picture, shortBio, id }) {
         <div className="oneblog-text-wrapper">
           <h3>{artist}</h3>
           <p>{shortBio.slice(0, 200)}...</p>
-          <Link to={`blog/${id}`} className="read-more-oneblog">
+          <Link to={`/blog/${id}`} className="read-more-oneblog">
             Read more
             <svg
               xmlns="http://www.w3.org/2000/svg"
