@@ -1,0 +1,14 @@
+.blog-header {
+  display: flex;
+}
+
+.Blog-main {
+  display: flex;
+}
+.blog-title {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0rem;
+  color: #d9d9d9;
+  font-size: 5rem;
+}

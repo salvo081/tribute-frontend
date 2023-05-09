@@ -1,11 +1,11 @@
-import './AllBlogs.css';
+import './AllBlogsHome.css';
 import OneBlog from './OneBlog';
 
-export default function AllBlogs({ items }) {
+export default function AllBlogsHome({ items }) {
   return (
-    <div className="AllBlogs">
+    <div className="AllBlogsHome">
       {items.length > 0 ? (
-        items.map((item) => {
+        items.slice(0, 6).map((item) => {
           return (
             <OneBlog
               artist={item.fields.artist}

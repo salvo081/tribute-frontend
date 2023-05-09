@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import { client } from './client';
 import { Route, Routes } from 'react-router';
 import { useLocation } from 'react-router-dom';
-import Articles from './pages/Articles';
+import Blog from './pages/Blog';
 import ArticleDetail from './pages/ArticleDetail';
 import Contact from './pages/Contact';
 import About from './pages/About';
@@ -41,9 +41,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home items={contentfulData} />} />
-          <Route path="articles" element={<Articles />} />
+          <Route path="blog" element={<Blog items={contentfulData} />} />
           <Route
-            path="articles/:id"
+            path="blog/:id"
             element={<ArticleDetail items={contentfulData} />}
           />
           <Route path="contact" element={<Contact />} />

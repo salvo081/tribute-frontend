@@ -1,0 +1,6 @@
+.AllBlogsHome {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  gap: 1rem;
+}
