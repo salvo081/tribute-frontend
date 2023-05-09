@@ -9,7 +9,7 @@ export default function OneBlog({ artist, picture, shortBio, id }) {
           <h3>{artist}</h3>
           <p>{shortBio.slice(0, 200)}...</p>
           <Link to={`articles/${id}`} className="read-more-oneblog">
-            Read more <span className="sr-only">about this is some title</span>
+            Read more
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon"
