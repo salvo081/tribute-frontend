@@ -1,13 +1,14 @@
 article {
 }
 
-article a::after {
+/* article a::after {
+  max-width: 50%;
   position: absolute;
   inset-block: 0;
   inset-inline: 0;
   cursor: pointer;
   content: '';
-}
+} */
 article img {
   max-width: 10%;
   transform-origin: center;
@@ -35,6 +36,8 @@ article img {
 }
 .oneblog-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  /* min-width: 80rem; */
   gap: 10rem;
   padding-top: 2rem;
   padding-bottom: 5rem;

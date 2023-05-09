@@ -15,11 +15,14 @@
   padding-bottom: 3rem;
 }
 .footer-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 3rem;
-  grid-row-gap: 0px;
+  grid-row-gap: 0px; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .newsletter-wrapper {
   display: flex;
@@ -88,7 +91,11 @@ label {
 .footer-divider {
   margin: 2rem;
 }
+
+/* Social wrapper */
+
 .social-footer {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
   height: 10rem;

@@ -15,7 +15,7 @@ export default function OneBox({ artist, picture, shortBio, id }) {
 
   return (
     <section className="articles">
-      <article>
+      <article className="onebox">
         <div className="article-wrapper">
           <figure>
             <img src={`https:${picture}`} alt={artist} />
