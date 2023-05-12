@@ -5,33 +5,38 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 
 import { useEffect, useState } from 'react';
-import { client } from './client';
+// import { client } from './client';
 import { Route, Routes } from 'react-router';
 import { useLocation } from 'react-router-dom';
 import Blog from './pages/Blog';
 import ArticleDetail from './pages/ArticleDetail';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import axios from 'axios';
 
 function App() {
-  const [contentfulData, setContentfulData] = useState([]);
+  const [artists, setArtists] = useState([]); // Rename state variable
   const { pathname } = useLocation();
 
   useEffect(() => {
-    client
-      .getEntries()
-      .then((entries) => {
-        // console.log(entries);
-        setContentfulData(entries.items);
-      })
-      .catch((err) => console.log(err));
+    async function fetchArtists() {
+      // Define asynchronous function
+      try {
+        const response = await axios.get('http://localhost:8080/artists'); // Make GET request to localhost:8080/artists
+        setArtists(response.data); // Set state with response data
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchArtists(); // Call asynchronous function
   }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  // console.log(contentfulData);
+  console.log(artists);
 
   return (
     <div className="App">
@@ -40,12 +45,9 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home items={contentfulData} />} />
-          <Route path="blog" element={<Blog items={contentfulData} />} />
-          <Route
-            path="blog/:id"
-            element={<ArticleDetail items={contentfulData} />}
-          />
+          <Route path="/" element={<Home items={{}} />} />
+          <Route path="blog" element={<Blog items={{}} />} />
+          <Route path="blog/:id" element={<ArticleDetail items={{}} />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
         </Routes>
