@@ -2,7 +2,7 @@ import './AllBoxes.css';
 import OneBox from './OneBox';
 
 export default function AllBoxes({ items }) {
-  // console.log('AllBoxes items: ', items);
+  console.log('AllBoxes items: ', items);
 
   return (
     <div className="all-boxes-wrapper">
@@ -11,11 +11,11 @@ export default function AllBoxes({ items }) {
           items.slice(0, 3).map((item) => {
             return (
               <OneBox
-                artist={item.fields.artist}
-                id={item.fields.id}
-                picture={item.fields.picture.fields.file.url}
-                shortBio={item.fields.shortBio.content[0].content[0].value}
-                key={item.fields.id}
+                artist={item.artist}
+                id={item.id}
+                picture={''}
+                shortBio={item.short_bio}
+                key={item.id}
               />
             );
           })

@@ -2,12 +2,12 @@ import { useParams } from 'react-router-dom';
 import './ArticleDetail.css';
 
 export default function ArticleDetail({ items }) {
-  // console.log('ArticleDetail', items);
+  console.log('ArticleDetail', items);
 
   const { id } = useParams();
   // console.log('id:', id, typeof id);
 
-  const thisItem = items.find((item) => item.fields.id === parseInt(id));
+  const thisItem = items.find((item) => item.id === parseInt(id));
 
   // console.log('items.length: ', items.length, 'thisItem: ', thisItem);
 
@@ -25,18 +25,18 @@ export default function ArticleDetail({ items }) {
     picture,
     shortBio,
   } = {
-    artist: thisItem.fields.artist,
-    country: thisItem.fields.country,
-    birth: thisItem.fields.birth,
-    death: thisItem.fields.death,
-    artOfDeath: thisItem.fields.artOfDeath,
-    greatestHits: thisItem.fields.greatestHits.content[0].content,
-    bandName: thisItem.fields.bandName,
-    album: thisItem.fields.album,
-    biggestTour: thisItem.fields.biggestTour,
-    distinguishingFeature: thisItem.fields.distinguishingFeature,
-    picture: thisItem.fields.picture.fields.file.url,
-    shortBio: thisItem.fields.shortBio.content,
+    artist: thisItem.artist,
+    country: thisItem.country,
+    birth: thisItem.born,
+    death: thisItem.died,
+    artOfDeath: thisItem.cause_of_death,
+    greatestHits: thisItem.greatest_hits,
+    bandName: thisItem.band_name,
+    album: thisItem.most_sold_album,
+    biggestTour: thisItem.biggest_tour,
+    distinguishingFeature: thisItem.distinguishing_feature,
+    picture: thisItem.picture,
+    shortBio: thisItem.short_bio,
   };
 
   // console.log('Short bio:', shortBio);
@@ -109,7 +109,7 @@ export default function ArticleDetail({ items }) {
                   <dt>Greatest Hits:</dt>
                   <dd>
                     <ol className="ArticleDetail-list-greatestHits">
-                      {greatestHits.map((el) => {
+                      {/* {greatestHits.map((el) => {
                         const title = el.content[0].content[0].value;
                         const description = el.content[0].content[1].value;
                         return (
@@ -120,7 +120,7 @@ export default function ArticleDetail({ items }) {
                             {description}
                           </li>
                         );
-                      })}
+                      })} */}
                     </ol>
                   </dd>
                 </>
@@ -157,13 +157,7 @@ export default function ArticleDetail({ items }) {
         <div className="ArticleDetail-content-container">
           <article className="ArticleDetail-artist-bio">
             <h3>Artist Bio</h3>
-            {shortBio.length > 0 ? (
-              shortBio.map((el) => {
-                return <p key={key++}>{el.content[0].value}</p>;
-              })
-            ) : (
-              <h1>NO BIO FOUND</h1>
-            )}
+            {shortBio}
           </article>
         </div>
       </section>

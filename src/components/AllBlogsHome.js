@@ -8,11 +8,11 @@ export default function AllBlogsHome({ items }) {
         items.slice(0, 6).map((item) => {
           return (
             <OneBlog
-              artist={item.fields.artist}
-              id={item.fields.id}
-              picture={item.fields.picture.fields.file.url}
-              shortBio={item.fields.shortBio.content[0].content[0].value}
-              key={item.fields.id}
+              artist={item.artist}
+              id={item.id}
+              picture={''}
+              shortBio={item.short_bio}
+              key={item.id}
             />
           );
         })
