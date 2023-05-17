@@ -2,7 +2,7 @@ import './AllBoxes.css';
 import OneBox from './OneBox';
 
 export default function AllBoxes({ items }) {
-  console.log('AllBoxes items: ', items);
+  // console.log('AllBoxes items: ', items);
 
   return (
     <div className="all-boxes-wrapper">
@@ -13,7 +13,7 @@ export default function AllBoxes({ items }) {
               <OneBox
                 artist={item.artist}
                 id={item.id}
-                picture={''}
+                picture={item.picture}
                 shortBio={item.short_bio}
                 key={item.id}
               />

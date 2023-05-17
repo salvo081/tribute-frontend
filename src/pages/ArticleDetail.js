@@ -1,8 +1,10 @@
 import { useParams } from 'react-router-dom';
 import './ArticleDetail.css';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function ArticleDetail({ items }) {
-  console.log('ArticleDetail', items);
+  // console.log('ArticleDetail', items);
 
   const { id } = useParams();
   // console.log('id:', id, typeof id);
@@ -10,6 +12,40 @@ export default function ArticleDetail({ items }) {
   const thisItem = items.find((item) => item.id === parseInt(id));
 
   // console.log('items.length: ', items.length, 'thisItem: ', thisItem);
+
+  // const [singleArtist, setSingleArtist] = useState({}); // Rename state variable
+
+  // useEffect(() => {
+  //   console.log('USE EFFECT');
+  //   async function fetchSingleArtist() {
+  //     // Define asynchronous function
+  //     try {
+  //       console.log('id:', id, typeof id);
+  //       const response = await axios.get(`http://localhost:8080/artists/${id}`); // Make GET request to localhost:8080/artists
+  //       setSingleArtist(response.data); // Set state with response data
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   }
+
+  //   fetchSingleArtist(); // Call asynchronous function
+  // }, [id]);
+
+  // async function fetchSingleArtist() {
+  //   console.log('FETCH SINGLE ARTIST');
+  //   // Define asynchronous function
+  //   try {
+  //     console.log('id:', id, typeof id);
+  //     const response = await axios.get(`http://localhost:8080/artists/${id}`); // Make GET request to localhost:8080/artists
+  //     setSingleArtist(response.data); // Set state with response data
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
+
+  // fetchSingleArtist(); // Call asynchronous function
+
+  // console.log('Single Artist:', singleArtist);
 
   const {
     artist,
@@ -30,13 +66,13 @@ export default function ArticleDetail({ items }) {
     birth: thisItem.born,
     death: thisItem.died,
     artOfDeath: thisItem.cause_of_death,
-    greatestHits: thisItem.greatest_hits,
+    greatestHits: thisItem.greatest_hits.split('\\n'),
     bandName: thisItem.band_name,
     album: thisItem.most_sold_album,
     biggestTour: thisItem.biggest_tour,
     distinguishingFeature: thisItem.distinguishing_feature,
     picture: thisItem.picture,
-    shortBio: thisItem.short_bio,
+    shortBio: thisItem.short_bio.split('\\n'),
   };
 
   // console.log('Short bio:', shortBio);
@@ -109,9 +145,9 @@ export default function ArticleDetail({ items }) {
                   <dt>Greatest Hits:</dt>
                   <dd>
                     <ol className="ArticleDetail-list-greatestHits">
-                      {/* {greatestHits.map((el) => {
-                        const title = el.content[0].content[0].value;
-                        const description = el.content[0].content[1].value;
+                      {greatestHits.map((el) => {
+                        const title = el.slice(0, el.indexOf('-'));
+                        const description = el.slice(el.indexOf('-'));
                         return (
                           <li key={key++}>
                             <span className="ArticleDetail-greatestHits-title">
@@ -120,7 +156,7 @@ export default function ArticleDetail({ items }) {
                             {description}
                           </li>
                         );
-                      })} */}
+                      })}
                     </ol>
                   </dd>
                 </>
@@ -157,7 +193,13 @@ export default function ArticleDetail({ items }) {
         <div className="ArticleDetail-content-container">
           <article className="ArticleDetail-artist-bio">
             <h3>Artist Bio</h3>
-            {shortBio}
+            {shortBio.length > 0 ? (
+              shortBio.map((el) => {
+                return <p key={key++}>{el}</p>;
+              })
+            ) : (
+              <h1>NO BIO FOUND</h1>
+            )}
           </article>
         </div>
       </section>

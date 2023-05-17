@@ -10,7 +10,7 @@ export default function AllBlogsHome({ items }) {
             <OneBlog
               artist={item.artist}
               id={item.id}
-              picture={''}
+              picture={item.picture}
               shortBio={item.short_bio}
               key={item.id}
             />
