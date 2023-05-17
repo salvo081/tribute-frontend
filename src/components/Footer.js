@@ -29,7 +29,7 @@ export default function Footer() {
                   id="newsletter"
                 />
                 <label htmlFor="newsletter">
-                  I accept the Pivacy Policy and subscrieb the newsletters
+                  I accept the Pivacy Policy and subscribe the newsletters
                 </label>
               </div>
             </form>
