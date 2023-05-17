@@ -3,47 +3,26 @@ import './ArticleDetail.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export default function ArticleDetail({ items }) {
-  // console.log('ArticleDetail', items);
-
+export default function ArticleDetail() {
   const { id } = useParams();
   // console.log('id:', id, typeof id);
 
-  const thisItem = items.find((item) => item.id === parseInt(id));
+  const [singleArtist, setSingleArtist] = useState({}); // Rename state variable
 
-  // console.log('items.length: ', items.length, 'thisItem: ', thisItem);
+  useEffect(() => {
+    // console.log('USE EFFECT');
+    async function fetchSingleArtist() {
+      // Define asynchronous function
+      try {
+        const response = await axios.get(`http://localhost:8080/artists/${id}`); // Make GET request to localhost:8080/artists
+        setSingleArtist(response.data); // Set state with response data
+      } catch (error) {
+        console.error(error);
+      }
+    }
 
-  // const [singleArtist, setSingleArtist] = useState({}); // Rename state variable
-
-  // useEffect(() => {
-  //   console.log('USE EFFECT');
-  //   async function fetchSingleArtist() {
-  //     // Define asynchronous function
-  //     try {
-  //       console.log('id:', id, typeof id);
-  //       const response = await axios.get(`http://localhost:8080/artists/${id}`); // Make GET request to localhost:8080/artists
-  //       setSingleArtist(response.data); // Set state with response data
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   }
-
-  //   fetchSingleArtist(); // Call asynchronous function
-  // }, [id]);
-
-  // async function fetchSingleArtist() {
-  //   console.log('FETCH SINGLE ARTIST');
-  //   // Define asynchronous function
-  //   try {
-  //     console.log('id:', id, typeof id);
-  //     const response = await axios.get(`http://localhost:8080/artists/${id}`); // Make GET request to localhost:8080/artists
-  //     setSingleArtist(response.data); // Set state with response data
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-
-  // fetchSingleArtist(); // Call asynchronous function
+    fetchSingleArtist(); // Call asynchronous function
+  }, [id]);
 
   // console.log('Single Artist:', singleArtist);
 
@@ -61,23 +40,29 @@ export default function ArticleDetail({ items }) {
     picture,
     shortBio,
   } = {
-    artist: thisItem.artist,
-    country: thisItem.country,
-    birth: thisItem.born,
-    death: thisItem.died,
-    artOfDeath: thisItem.cause_of_death,
-    greatestHits: thisItem.greatest_hits.split('\\n'),
-    bandName: thisItem.band_name,
-    album: thisItem.most_sold_album,
-    biggestTour: thisItem.biggest_tour,
-    distinguishingFeature: thisItem.distinguishing_feature,
-    picture: thisItem.picture,
-    shortBio: thisItem.short_bio.split('\\n'),
+    artist: singleArtist.artist,
+    country: singleArtist.country,
+    birth: singleArtist.born,
+    death: singleArtist.died,
+    artOfDeath: singleArtist.cause_of_death,
+    greatestHits: singleArtist.greatest_hits?.split('\\n'),
+    bandName: singleArtist.band_name,
+    album: singleArtist.most_sold_album,
+    biggestTour: singleArtist.biggest_tour,
+    distinguishingFeature: singleArtist.distinguishing_feature,
+    picture: singleArtist.picture,
+    shortBio: singleArtist.short_bio?.split('\\n'),
   };
 
-  // console.log('Short bio:', shortBio);
-
   let key = 1;
+
+  //check if singleArtist === {} => the initial state of useState({})
+  if (Object.keys(singleArtist).length === 0)
+    return (
+      <>
+        <h1>LOADING...</h1>
+      </>
+    );
 
   return (
     <>
