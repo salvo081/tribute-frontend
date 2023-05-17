@@ -26,9 +26,9 @@ export default function Footer() {
                   className="newsletter-checkbox"
                   type="checkbox"
                   name=""
-                  id=""
+                  id="newsletter"
                 />
-                <label for="newsletter">
+                <label htmlFor="newsletter">
                   I accept the Pivacy Policy and subscrieb the newsletters
                 </label>
               </div>

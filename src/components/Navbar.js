@@ -22,7 +22,7 @@ export default function Navbar() {
           <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
-      <div class="search-container">
+      <div className="search-container">
         <form>
           <input
             className="search expandright"
@@ -31,7 +31,7 @@ export default function Navbar() {
             name="q"
             placeholder="Search"
           />
-          <label className="button searchbutton" for="searchright">
+          <label className="button searchbutton" htmlFor="searchright">
             <span className="mglass">&#9906;</span>
           </label>
         </form>
